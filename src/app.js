@@ -1,32 +1,54 @@
-console.log("App.js is running");
+class IndecisionApp extends React.Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <Action />
+        <Options />
+        <AddOption />
+      </div>
+    );
+  }
+}
 
-//JSX
-const app = {
-  title: "Indecision App",
-  subTitle: "Put your in the hands of a computer"
-};
+class Header extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Indecision</h1>
+        <h2>Put your life in the hands of a computer</h2>
+      </div>
+    );
+  }
+}
 
-const templateOne = (
-  <div>
-    <h1>{app.title}</h1>
-    <p>{app.subTitle}</p>
-    <ol>
-      <li>Item one</li>
-      <li>Item two</li>
-    </ol>
-  </div>
-);
+class Action extends React.Component {
+  render() {
+    return <button>What should I do?</button>;
+  }
+}
 
-const userName = "Shankhadeep Bhadra";
-const userAge = "24";
-const userLocation = "West Bengal, India";
-const templateTwo = (
-  <div>
-    <h1>Name: {userName}</h1>
-    <p> age : {userAge}</p>
-    <p>Location: {userLocation}</p>
-  </div>
-);
+class Options extends React.Component {
+  render() {
+    return (
+      <div>
+        Options Component here
+        <Option />
+      </div>
+    );
+  }
+}
 
-const appRoot = document.getElementById("app");
-ReactDOM.render(templateOne, appRoot);
+class Option extends React.Component {
+  render() {
+    return <div>Option Component here</div>;
+  }
+}
+
+class AddOption extends React.Component {
+  render() {
+    return <div>Add option Component here</div>;
+  }
+}
+
+ReactDOM.render(<IndecisionApp />, document.getElementById("app"));
