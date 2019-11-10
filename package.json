@@ -6,7 +6,6 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "dev-server": "webpack-dev-server"
   },
   "keywords": [],
@@ -14,9 +13,19 @@
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
     "live-server": "^1.2.1",
-    "webpack": "^3.1.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-modal": "^2.2.2",
+    "style-loader": "^0.18.2",
+    "validator": "^12.0.0",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
